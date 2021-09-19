@@ -1,7 +1,7 @@
 import './Header.css'
 import {useHistory} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../store/store";
+import {RootState} from "../../Store/Store";
 import {toTicTacToe, toTodo, toWeather} from "../../Features/PageSelect/PageSelectSlice";
 
 const Header = () => {

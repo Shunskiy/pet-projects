@@ -39,6 +39,7 @@
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  flex-shrink: 0;
   border: 1px solid black;
 }
 

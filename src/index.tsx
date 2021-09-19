@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './Components/Home/Home'
 import {BrowserRouter} from "react-router-dom";
-import {store} from './store/store'
+import {Store} from './Store/Store'
 import {Provider} from "react-redux";
 
 ReactDOM.render(
     <BrowserRouter>
-        <Provider store={store}>
+        <Provider store={Store}>
             <div className="app__wrapper">
                 <Home/>
             </div>
