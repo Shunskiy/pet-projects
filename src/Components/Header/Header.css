@@ -2,13 +2,21 @@
 /*  button: #ffcb77*/
 /*  checkmarks: #fe6d73*/
 
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  min-height: 60px;
+}
+
 .header__nav-list {
   display: flex;
 }
 
 .header__button {
   min-width: 120px;
-  min-height: 44px;
+  padding: 20px;
+  height: 100%;
   text-transform: uppercase;
   letter-spacing: .1em;
   background-color: #ffcb77;
