@@ -1,0 +1,25 @@
+/*colors:*/
+/*  button: #ffcb77*/
+/*  checkmarks: #fe6d73*/
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__button {
+  min-width: 120px;
+  min-height: 44px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: #ffcb77;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.header__button:hover,
+.header__button:focus {
+  background-color: #ffce7f;
+}
+
+.header__button--active {
+  border-bottom: 2px solid #17c3b2;
+}
