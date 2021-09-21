@@ -34,7 +34,10 @@ const Todo = () => {
                                     }))
                                 }}/>
                                 <label className="todo__text" htmlFor={`checkbox-${key}`}>
-                                    {item.text}
+                                    {item.complete
+                                    ? <s>{item.text}</s>
+                                    : item.text
+                                    }
                                 </label>
                                 <button className="todo__button" type="button" onClick={() => {
                                     dispatch(deleteTodo({

@@ -24,6 +24,7 @@
 .todo__item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -31,6 +32,8 @@
   display: flex;
   align-items: center;
   font-size: 22px;
+  margin-right: 40px;
+  word-break: break-all;
 }
 
 .todo__text::before {
