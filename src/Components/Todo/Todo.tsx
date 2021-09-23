@@ -26,7 +26,7 @@ const Todo = () => {
                         return (
                             <li className="todo__item" key={key}>
                                 <input className="visually-hidden todo__checkbox" type="checkbox" id={`checkbox-${key}`}
-                                       defaultChecked={item.complete} onChange={() => {
+                                       checked={item.complete} onChange={() => {
                                     dispatch(updateList({
                                         id: item.id,
                                         text: item.text,

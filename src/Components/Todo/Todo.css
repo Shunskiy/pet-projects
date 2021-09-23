@@ -55,10 +55,17 @@
 .todo__input-wrapper {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  max-width: 500px;
+  width: 100%;
 }
 
 .todo__input {
+  height: 25px;
   margin-bottom: 10px;
+  padding: 0 20px;
+  border: 2px solid #0b76ef;
+  border-radius: 10px;
 }
 
 .todo__button {
@@ -70,4 +77,16 @@
 .todo__button:focus,
 .todo__button:hover {
   background-color: #ffcb7f;
+}
+
+@media (max-width: 414px) {
+  .todo__item {
+    flex-direction: column;
+  }
+
+  .todo__text {
+    margin: 0 0 10px;
+    align-self: flex-start;
+    font-size: 18px;
+  }
 }
