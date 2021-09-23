@@ -1,0 +1,33 @@
+.tictactoe {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.tictactoe__title {
+  margin-bottom: 10px;
+}
+
+.tictactoe__winner {
+  text-align: center;
+}
+
+.game {
+  border-collapse: collapse;
+  width: 300px;
+  align-self: center;
+}
+
+.game__cell {
+  border: 2px solid #000000;
+  text-align: center;
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 414px) {
+  .tictactoe__title {
+    text-align: center;
+  }
+}
