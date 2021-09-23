@@ -21,6 +21,11 @@ const initialState: TodoState = [
         id: Date.now(),
         text: "👋 Добавь новые задания",
         complete: false
+    },
+    {
+        id: Date.now() + 1,
+        text: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        complete: false
     }
 ]
 
