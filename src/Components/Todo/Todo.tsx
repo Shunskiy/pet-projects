@@ -14,7 +14,8 @@ const Todo = () => {
     useEffect(() => {
         document.title = "Pet Project 😺 | Todo"
         dispatch(toTodo())
-    }, [dispatch])
+        console.log(todoStore)
+    }, [dispatch, todoStore])
 
     return (
         <section className="main__todo todo">
@@ -25,8 +26,9 @@ const Todo = () => {
                     : todoStore.map((item, key) => {
                         return (
                             <li className="todo__item" key={key}>
+                                {console.log(item.complete)}
                                 <input className="visually-hidden todo__checkbox" type="checkbox" id={`checkbox-${key}`}
-                                       defaultChecked={item.complete} onChange={() => {
+                                       checked={item.complete} onChange={() => {
                                     dispatch(updateList({
                                         id: item.id,
                                         text: item.text,
@@ -34,10 +36,7 @@ const Todo = () => {
                                     }))
                                 }}/>
                                 <label className="todo__text" htmlFor={`checkbox-${key}`}>
-                                    {item.complete
-                                    ? <s>{item.text}</s>
-                                    : item.text
-                                    }
+                                    {item.complete ? <s>{item.text}</s> : item.text}
                                 </label>
                                 <button className="todo__button" type="button" onClick={() => {
                                     dispatch(deleteTodo({
