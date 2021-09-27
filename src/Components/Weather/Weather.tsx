@@ -2,6 +2,7 @@ import {useDispatch} from "react-redux";
 import {useEffect, useState} from "react";
 import {toWeather} from "../../Features/PageSelect/PageSelectSlice";
 import axios from "axios";
+import "./Weather.css"
 
 const Weather = () => {
     interface Data {
@@ -20,10 +21,14 @@ const Weather = () => {
     const url = `https://goweather.herokuapp.com/weather/${city}`
 
     const updateData = () => {
+        console.log('rdrdr')
         if (city) {
-            axios.get(url).then((response) => {
-                setData(response.data)
-            })
+                axios.get(url).then((response) => {
+                    setData(response.data)
+                    setError('')
+                }).catch(() => {
+                    setError("Error")
+                })
         }
 
         if (!city) {
@@ -51,24 +56,24 @@ const Weather = () => {
                 Weather ☁
             </h1>
             <h2 className="weather__city">
-                {upperFirstChar(city)}
+                { error ? "Error" : upperFirstChar(city)}
             </h2>
             {!error ? <h2>{error}</h2> : null}
             <ul className="weather__info">
-                <li>
-                    <b>Temperature:</b> {data.temperature}
+                <li className="weather__info-item">
+                    <b>Temperature:</b> {error ? "error" : data.temperature}
                 </li>
-                <li>
-                    <b>Wind:</b> {data.wind}
+                <li className="weather__info-item">
+                    <b>Wind:</b> {error ? "error" : data.wind}
                 </li>
-                <li>
-                    <b>About:</b> {data.description}
+                <li className="weather__info-item">
+                    <b>About:</b> {error ? "error" : data.description}
                 </li>
             </ul>
-            <input value={city} onChange={(e) => {
+            <input className="weather__input" value={city} onChange={(e) => {
                 setCity(e.target.value)
             }}/>
-            <button onClick={() => {
+            <button className="weather__button" onClick={() => {
                 updateData()
             }}>Узнать
             </button>

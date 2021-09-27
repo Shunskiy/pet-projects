@@ -1,0 +1,36 @@
+.weather__info {
+    display: flex;
+    align-items: center;
+}
+
+.weather__info-item {
+    margin-right: 40px;
+    margin-bottom: 15px;
+}
+
+.weather__info-item:last-child {
+    margin-right: 0;
+}
+
+.weather__input {
+    height: 25px;
+    margin-right: 10px;
+    padding: 0 20px;
+    border: 2px solid #0b76ef;
+    border-radius: 10px;
+}
+
+.weather__input:focus {
+    outline: 0;
+}
+
+.weather__button {
+    min-width: 144px;
+    padding: 10px;
+    background-color: #ffcb77;
+}
+
+.weather__button:hover,
+.weather__button:focus {
+    background-color: #ffcb7f;
+}
