@@ -31,3 +31,22 @@
 .header__button--active {
   border-bottom: 2px solid #17c3b2;
 }
+
+@media (max-width: 414px) {
+  .header {
+    width: 100%;
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .header__nav-item {
+    flex: 1;
+  }
+
+  .header__button {
+    width: 100%;
+    font-size: 12px;
+  }
+}
