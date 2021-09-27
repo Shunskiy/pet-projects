@@ -14,7 +14,6 @@ const Todo = () => {
     useEffect(() => {
         document.title = "Pet Project 😺 | Todo"
         dispatch(toTodo())
-        console.log(todoStore)
     }, [dispatch, todoStore])
 
     return (
@@ -26,7 +25,6 @@ const Todo = () => {
                     : todoStore.map((item, key) => {
                         return (
                             <li className="todo__item" key={key}>
-                                {console.log(item.complete)}
                                 <input className="visually-hidden todo__checkbox" type="checkbox" id={`checkbox-${key}`}
                                        checked={item.complete} onChange={() => {
                                     dispatch(updateList({
