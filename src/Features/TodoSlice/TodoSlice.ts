@@ -25,7 +25,7 @@ const initialState: TodoState = [
     {
         id: Date.now() + 1,
         text: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        complete: false
+        complete: true
     }
 ]
 
@@ -41,8 +41,7 @@ export const TodoSlice = createSlice({
             state.push(action.payload)
         },
         deleteTodo: (state, action:PayloadAction<TodoId>) => {
-            let todoIndex = state.findIndex(todo => todo.id === action.payload.id)
-            state.splice(todoIndex, 1)
+            state.splice(state.findIndex(item => item.id === action.payload.id), 1)
         }
     }
 })

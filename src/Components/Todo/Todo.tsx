@@ -14,7 +14,7 @@ const Todo = () => {
     useEffect(() => {
         document.title = "Pet Project 😺 | Todo"
         dispatch(toTodo())
-    }, [dispatch])
+    }, [dispatch, todoStore])
 
     return (
         <section className="main__todo todo">
@@ -34,10 +34,7 @@ const Todo = () => {
                                     }))
                                 }}/>
                                 <label className="todo__text" htmlFor={`checkbox-${key}`}>
-                                    {item.complete
-                                    ? <s>{item.text}</s>
-                                    : item.text
-                                    }
+                                    {item.complete ? <s>{item.text}</s> : item.text}
                                 </label>
                                 <button className="todo__button" type="button" onClick={() => {
                                     dispatch(deleteTodo({
