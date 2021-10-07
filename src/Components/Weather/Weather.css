@@ -1,0 +1,29 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.weather__info-wrapper {
+  max-width: 650px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.weather__input-wrapper {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.weather__input {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 414px) {
+  .weather__input-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+}

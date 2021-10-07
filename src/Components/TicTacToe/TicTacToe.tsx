@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
+import {Typography} from "@mui/material";
 import {toTicTacToe} from "../../Features/PageSelect/PageSelectSlice";
 import './TicTacToe.css'
 import {RootState} from "../../Store/Store";
@@ -85,7 +86,7 @@ const TicTacToe = () => {
         <section className="tictactoe">
             <h1 className="tictactoe__title">TicTacToe 😎</h1>
             {!gameIsOn
-                ? <h2 className="tictactoe__winner">Победили {winner}</h2>
+                ? <Typography className="tictactoe__winner" variant="h2" component="h2">Победили {winner}</Typography>
                 : null
             }
             <table className="tictactoe__game game">
